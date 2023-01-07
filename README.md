@@ -1,9 +1,12 @@
 # disclaimer
-I, Sadman Kabir, am only responsible for the Registration Page of the frontend. (and the pixel art of our wonderful school mascot Rhett)
+I, Sadman Kabir, am only responsible for the Registration Page of the frontend and Demo Video. (and the pixel art of our wonderful school mascot Rhett)
 
-# registration-magic
-Automate BU Registration
+## Building the project
+To build this project you must have python and flutter installed on your system. To run the project go to the ui folder and type the command:
 
+-   $flutter run lib/main.dart
+
+(The backend is in Python, an interpreted language, so no building is required)
 
 ## Running the project
 
@@ -14,22 +17,33 @@ Flutter
 
 Backend
 - `cd backend`
-- `py main.py`
+- `py main.py` or `nohup py main.py &`
 See `backend\README.md` for more details on running the backend server
 
 ## Project Structure
 
-parenthesis = optional
-
-- Flutter frontend
-  - Ability to search for and add courses, stored locally (or to a server)
-  - Ability to schedule registration (when does your registration open?)
-  - Ability to send this data to the backend
-  - (User login page)
-- Python backend
+### Frontend
+Built in Flutter
+  - User login page
+  - Can search for and add courses, stored locally
+  - Schedules registration, sent to Flask API on backend
+### Backend
+Built in Python with Flask to receive API info
   - Ability to send requests from backend to Student Link to make the registration requests
+    - User, Semester, Course data structures and url param generator functions defined in `user.py` and `courses.py`
+   - API using Flask
+    - Async scheduler and Flask server in `main.py`
   - Storing all SelectIt IDs for every course
-    - web scraping
-    - ** can scrape from value token of the input tag defining the checkbox TL;DR use the checkbox to get SelectIt info **
-- (Firebase database, or MongoDB -- can decide later for storing user data through authentication)
+    - Course database handled via `coursedb.py`
+    - Web scraping via Selenium
+      - Scrapes from the value token of the input tag defining the checkbox i.e. we use the checkbox to get SelectIt info
 
+## Application Demo
+-   https://www.youtube.com/watch?v=ln91Cqp5xLY
+
+## Team Members
+-   Nathan Clark: nbclark@bu.edu
+-   Sadman Kabir: kabirs@bu.edu
+-   Oluwaseun Angelo Soyannwo: seun@bu.edu
+-   Peter West: flibble@bu.edu
+-   Cynthia Young: mcyoung@bu.edu
