@@ -1,3 +1,6 @@
+# disclaimer
+I, Sadman Kabir, am only responsible for the Registration Page of the frontend. (and the pixel art of our wonderful school mascot Rhett)
+
 # registration-magic
 Automate BU Registration
 
