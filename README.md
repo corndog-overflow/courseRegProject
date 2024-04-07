@@ -1,5 +1,5 @@
 # disclaimer
-I, Sadman Kabir, am only responsible for the Registration Page of the frontend and Demo Video. (and the pixel art of our wonderful school mascot Rhett)
+I was responsible for the frontend of the application.
 
 ## Building the project
 To build this project you must have python and flutter installed on your system. To run the project go to the ui folder and type the command:
